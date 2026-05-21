@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto & Co. | Agencia de Eventos y Marketing</title>
+  <style>
+    :root { --primary: #6366f1; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; scroll-behavior: smooth; }
+    body { background-color: var(--light); color: var(--dark); }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: white; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+    .nav-links a { margin-left: 2rem; text-decoration: none; color: var(--dark); font-weight: 500; }
+    .hero { padding: 8rem 10% 6rem 10%; text-align: center; background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.25rem; color: var(--gray); margin-bottom: 2rem; }
+    .btn { padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; }
+    section { padding: 5rem 10%; text-align: center; }
+    section h2 { font-size: 2.5rem; margin-bottom: 3rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .service-card { background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-form input, .contact-form textarea { padding: 1rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; width: 100%; }
+    footer { background: var(--dark); color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Impacto & Co.</div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <h1>Creamos Experiencias Inolvidables</h1>
+    <p>Somos expertos en organización de eventos corporativos y estrategias de marketing digital.</p>
+    <a href="#contacto" class="btn">Cotiza tu Proyecto</a>
+  </header>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Eventos Corporativos</h3>
+        <p>Conferencias y lanzamientos de producto con logística impecable.</p>
+      </div>
+      <div class="service-card">
+        <h3>Marketing Digital</h3>
+        <p>Estrategias de redes sociales y pauta digital para hacer ruido.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Hablemos de tu Proyecto</h2>
+    <form class="contact-form" id="agencyForm">
+      <input type="text" id="nodeName" placeholder="Tu Nombre" required>
+      <input type="email" id="nodeEmail" placeholder="Tu Correo" required>
+      <textarea id="nodeMessage" placeholder="Cuéntanos tu idea..." rows="5" required></textarea>
+      <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Impacto & Co. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('agencyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('¡Gracias! Nos pondremos en contacto pronto.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
